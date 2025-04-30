@@ -9,7 +9,7 @@
 * $PFAFN$ Model, on this basis, the model is optimized and improved, model compression and reasoning acceleration are achieved and used
 * $OpenVINO$ The framework was deployed and applied, and the requirements of the competition were met excellently.
 
-![Project Examples](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/examples.4u074u4fgio0.webp)
+![Project Examples](assets/examples.4u074u4fgio0.webp)
 
 
 ### Development environment
@@ -56,13 +56,13 @@ This project is mainly divided into two parts: model training and engineering im
 
 This project is based on $PFAFN$ The model redesigns each network module. The specific structure is shown in the figure below：
 
-![DNN Network structure](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/model.4ax0n6qbtbs0.webp)
+![DNN Network structure](assets/model.4ax0n6qbtbs0.webp)
 
 
 ### Project engineering implementation
 
 In order to meet the requirements of the contestants, this project carried out the engineering implementation part, which is mainly divided into two parts: model training and model pruning and quantization. The overall diagram of the project engineering deployment is as follows:
-![Project Engineering Deployment Overview](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/project.1dom5gtegs2o.webp)
+![Project Engineering Deployment Overview](assets/project.1dom5gtegs2o.webp)
 
 
 #### Experimental Results: Channel Pruning
