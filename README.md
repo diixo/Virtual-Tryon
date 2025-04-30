@@ -12,14 +12,9 @@
 ![Project Examples](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/examples.4u074u4fgio0.webp)
 
 
-### Project development environment
+### Development environment
 
-|   Development Platform   |   Version   | Development Tools |  Version  |
-| :-----------: | :------: | :----------------: | :----: |
-|    Pycharm    | 2022.3.2 | Visual Studio Code | 1.80.1 |
-| Visual Studio |  17.5.5  |                    |        |
-
-|  Development Environment |   Version   | Development Environment |  Version  |
+|       Packages    | Version  | Environment |  Version  |
 | :---------------: | :------: | :-----------: | :----: |
 | neural-compressor |  2.2.1  |     nncf     | 2.5.0 |
 |       numpy       |  1.23.4  |     onnx     | 1.14.0 |
@@ -50,11 +45,11 @@ pip install -r requirements.txt
 This project is mainly divided into two parts: model training and engineering implementation, so the warehouse created two branches `main` and `PruingQuantization`
 
 + `main` The branch is the inference part of the model, which includes the original Pytorch-Model, ONNX-Model, Reasoning of pruned and quantized models;
-  + `Img2Col` module is used to `corr_pure_torch` The module is used for inference acceleration and model training `corr_pure_torch` module and adopts `Img2Col` modules;
-  + $afwm$ and $networks$ from $PFAFN$ model's clothing deformation module and image generation module
-  + `PruningQuantization` The branch is the implementation part of the model engineering, which also includes the model training part and the model pruning and quantization;
-  + `ModelTraining` $PFAFN$ The training part of the model is divided into four stages. First, the teacher network is trained and then the student network is trained using adjustable knowledge distillation.
-  + `ModelPruningQuantization` is the main engineering implementation part of this project. Model pruning is mainly aimed at $Warp$ To reduce the loss of model accuracy, we adopted a modular pruning strategy and added model fine-tuning, dividing the model into several modules for pruning. We also used a variety of quantization techniques and tools to quantize the model. We specifically tried $Nerual\ Compressor$ post-training static quantization, Post-training static quantization for Pytorch and quantization-aware training for Pytorch.
++ `Img2Col` module is used to `corr_pure_torch` The module is used for inference acceleration and model training `corr_pure_torch` module and adopts `Img2Col` modules;
++ $afwm$ and $networks$ from $PFAFN$ model's clothing deformation module and image generation module
++ `PruningQuantization` The branch is the implementation part of the model engineering, which also includes the model training part and the model pruning and quantization;
++ `ModelTraining` $PFAFN$ The training part of the model is divided into four stages. First, the teacher network is trained and then the student network is trained using adjustable knowledge distillation.
++ `ModelPruningQuantization` is the main engineering implementation part of this project. Model pruning is mainly aimed at $Warp$ To reduce the loss of model accuracy, we adopted a modular pruning strategy and added model fine-tuning, dividing the model into several modules for pruning. We also used a variety of quantization techniques and tools to quantize the model. We specifically tried $Nerual\ Compressor$ post-training static quantization, Post-training static quantization for Pytorch and quantization-aware training for Pytorch.
 
 
 ### Model structure introduction
