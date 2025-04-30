@@ -6,7 +6,7 @@
 * Track virtual fitting competition, using $2D$ 
 * Virtual fitting technology is based on $VITON$ Open source dataset training 
 * $DNN$ The project selected cutting-edge top journal papers.
-* $PFAFN$ Model, on this basis, the model is optimized and improved, model compression and reasoning acceleration are achieved and used
+* $PF-AFN$ as basis model, that was optimized and improved, with model compression and reasoning acceleration are achieved and used
 * $OpenVINO$ The framework was deployed and applied, and the requirements of the competition were met excellently.
 
 ![Project Examples](assets/examples.4u074u4fgio0.webp)
