@@ -11,6 +11,7 @@
 
 ![Project Examples](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/examples.4u074u4fgio0.webp)
 
+
 ### Project development environment
 
 |   Development Platform   |   Version   | Development Tools |  Version  |
@@ -43,6 +44,7 @@ git clone https://github.com/LZHMS/Virtual-Tryon.git
 pip install -r requirements.txt
 ```
 
+
 ### Project Files Introduction
 
 This project is mainly divided into two parts: model training and engineering implementation, so the warehouse created two branches `main` and `PruingQuantization`
@@ -54,16 +56,19 @@ This project is mainly divided into two parts: model training and engineering im
   + `ModelTraining` $PFAFN$ The training part of the model is divided into four stages. First, the teacher network is trained and then the student network is trained using adjustable knowledge distillation.
   + `ModelPruningQuantization` is the main engineering implementation part of this project. Model pruning is mainly aimed at $Warp$ To reduce the loss of model accuracy, we adopted a modular pruning strategy and added model fine-tuning, dividing the model into several modules for pruning. We also used a variety of quantization techniques and tools to quantize the model. We specifically tried $Nerual\ Compressor$ post-training static quantization, Post-training static quantization for Pytorch and quantization-aware training for Pytorch.
 
+
 ### Model structure introduction
 
 This project is based on $PFAFN$ The model redesigns each network module. The specific structure is shown in the figure below：
 
 ![DNN Network structure](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/model.4ax0n6qbtbs0.webp)
 
+
 ### Project engineering implementation
 
 In order to meet the requirements of the contestants, this project carried out the engineering implementation part, which is mainly divided into two parts: model training and model pruning and quantization. The overall diagram of the project engineering deployment is as follows:
 ![Project Engineering Deployment Overview](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/project.1dom5gtegs2o.webp)
+
 
 #### Experimental Results: Channel Pruning
 
@@ -95,6 +100,7 @@ In order to meet the requirements of the contestants, this project carried out t
 |  CWM  |     112MB     |   40%   |   40.97MB   | 9.504 | 2.92 |
 |  IGM  |     167MB     |   25%   |   94.39MB   | 9.504 | 2.92 |
 
+
 #### Experimental Results: Quantization-aware Training
 
 |    Optimization    | CPU-FID | GPU-FID | Original Model | Quantized Model |
@@ -104,7 +110,8 @@ In order to meet the requirements of the contestants, this project carried out t
 |    Quantize IGM    | 10.382 | 10.249 |    94.39MB    |     24.10MB     |
 | Quantize CWM & IGM | 11.503 | 11.379 |    135.36MB    |     34.95MB     |
 
-#### 实验结果：`img2col` 优化加速
+
+#### Experimental results: `img2col` optimization speedup
 
 |Runtimes|CorrTorch(s)|Img2Col(s)|FPS|Acceleration Rate|
 |:------:|:----------:|:--------:|:----:|:------------:|
@@ -112,7 +119,10 @@ In order to meet the requirements of the contestants, this project carried out t
 |n=10000|1489.1325|927.4293|10.77|1.6057|
 |Average Time|0.1488|0.029|10.79|1.6017|
 
-### 参考文献
+
+### References
+
++ [FusionNet and AugmentedFlowNet: Selective Proxy Ground Truth for Training on Unlabeled Images](https://arxiv.org/pdf/1808.06389)
 + Y. Ge, Y. Song, R. Zhang, C. Ge, W. Liu, and P. Luo, "Parser-Free Virtual Try-on via Distilling Appearance Flows," arXiv preprint arXiv:2103.04559, 2021.
 + Y. Cheng, D. Wang, P. Zhou and T. Zhang, "Model Compression and Acceleration for Deep
 Neural Networks: The Principles, Progress, and Challenges," in IEEE Signal Processing Magazine,
