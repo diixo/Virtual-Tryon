@@ -117,6 +117,9 @@ In order to meet the requirements of the contestants, this project carried out t
 
 ### References
 
++ [FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks](https://github.com/vt-vl-lab/flownet2.pytorch)
++ [FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks, PDF](https://arxiv.org/abs/1612.01925)
++ [Deformable Convolutional Networks](https://arxiv.org/abs/1703.06211)
 + [FusionNet and AugmentedFlowNet: Selective Proxy Ground Truth for Training on Unlabeled Images](https://arxiv.org/pdf/1808.06389)
 + Y. Ge, Y. Song, R. Zhang, C. Ge, W. Liu, and P. Luo, "Parser-Free Virtual Try-on via Distilling Appearance Flows," arXiv preprint arXiv:2103.04559, 2021.
 + Y. Cheng, D. Wang, P. Zhou and T. Zhang, "Model Compression and Acceleration for Deep
