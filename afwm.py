@@ -4,6 +4,7 @@ import torch.nn.functional as F
 from torch import Tensor
 from corr_pure_torch import CorrTorch
 
+
 def bilinear_grid_sample(im: Tensor,
                          grid: Tensor,
                          align_corners: bool = False) -> Tensor:
@@ -213,7 +214,7 @@ class AFlowNet(nn.Module):
                 x_warp_after = x_warp
 
             max_displacement = 3
-            stride2 = 1     # 跳步
+            stride2 = 1     # Jump Step
             kernel = CorrTorch(max_disp=max_displacement, dila_patch=stride2)
             # kernel = torch.jit.script(kernel)
 
