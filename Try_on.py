@@ -7,7 +7,7 @@ import torch
 import cv2
 import torch.nn.functional as F
 from PIL import Image
-import torch_pruning as tp
+#import torch_pruning as tp
 from pre_dataset import *
 import warnings
 warnings.filterwarnings("ignore")
@@ -36,7 +36,7 @@ class CustomDataSet(torch.utils.data.Dataset):
         Edge = cv2.cvtColor(np.array(origin_clothe), cv2.COLOR_RGB2BGR)
         gray = cv2.cvtColor(Edge, cv2.COLOR_BGR2GRAY)
         blur = cv2.GaussianBlur(gray, (5, 5), 0)
-        # 二值化——强分离
+        # Binarization - strong separation
         blur[blur < max_limit] = 0
         clothe_edge = cv2.cvtColor(255 - blur, cv2.COLOR_BGR2RGB)
         clothe_edge = Image.fromarray(clothe_edge)
@@ -121,7 +121,7 @@ for i, data in enumerate(dataset, 0):
 
 print("Successfully processed the image!")
 
-# 计算FID指标
+# Calculating the FID indicator
 # way1: python -m pytorch_fid result/Tryon_IFModule_0.5 dataset/images
 # python -m pytorch_fid result/Tryon dataset/images
 # way2: fidelity --gpu 0 --fid --input1 results/demo/ --input2 dataset/test_img/

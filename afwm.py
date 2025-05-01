@@ -66,6 +66,7 @@ def bilinear_grid_sample(im: Tensor,
 
     return (Ia * wa + Ib * wb + Ic * wc + Id * wd).reshape(n, c, gh, gw)
 
+
 def apply_offset(offset):
     sizes = list(offset.size()[2:])
     grid_list = torch.meshgrid([torch.arange(size, device=offset.device) for size in sizes])
@@ -169,7 +170,8 @@ class RefinePyramid(nn.Module):
 
         return list(reversed(feature_list))
 
-    
+
+# Appearance Flow Network
 class AFlowNet(nn.Module):
     def __init__(self, num_pyramid, fpn_dim=256):
         super(AFlowNet, self).__init__()
@@ -244,6 +246,8 @@ class AFlowNet(nn.Module):
                                align_corners=False)
         return x_warp, last_flow
 
+
+# Adaptive Feature Warping Module
 class AFWM(nn.Module):
 
     def __init__(self, opt, input_nc):
